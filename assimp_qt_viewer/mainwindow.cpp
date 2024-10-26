@@ -145,12 +145,12 @@ void MainWindow::ResetSceneInfos()
 
 void MainWindow::LogInfo(const QString& pMessage)
 {
-	Assimp::DefaultLogger::get()->info(pMessage.toStdString());
+	//Assimp::DefaultLogger::get()->info(pMessage.toStdString());
 }
 
 void MainWindow::LogError(const QString& pMessage)
 {
-	Assimp::DefaultLogger::get()->error(pMessage.toStdString());
+	//Assimp::DefaultLogger::get()->error(pMessage.toStdString());
 }
 
 /********************************************************************/
@@ -296,7 +296,7 @@ MainWindow::~MainWindow()
 {
 using namespace Assimp;
 
-	DefaultLogger::get()->detatchStream(mLoggerView, DefaultLogger::Debugging | DefaultLogger::Info | DefaultLogger::Err | DefaultLogger::Warn);
+	DefaultLogger::get()->detachStream(mLoggerView, DefaultLogger::Debugging | DefaultLogger::Info | DefaultLogger::Err | DefaultLogger::Warn);
 	DefaultLogger::kill();
 
 	if(mScene != nullptr) mImporter.FreeScene();

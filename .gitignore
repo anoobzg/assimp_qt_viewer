@@ -1,0 +1,13 @@
+/node_modules
+/bin
+/lib
+/build
+/out
+/linux-build/
+/ninja-build/
+/win32-build/
+/mac-build/
+/data/
+__pycache__/
+.vs/
+CMakeUserPresets.json

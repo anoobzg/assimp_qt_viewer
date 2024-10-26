@@ -58,7 +58,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <assimp/DefaultLogger.hpp>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include "contrib/stb_image/stb_image.h"
+#include "stb_image.h"
 
 CGLView::SHelper_Mesh::SHelper_Mesh(const size_t pQuantity_Point, const size_t pQuantity_Line, const size_t pQuantity_Triangle, const SBBox& pBBox)
 : Quantity_Point(pQuantity_Point)
@@ -436,11 +436,11 @@ void CGLView::BBox_GetFromVertices(const aiVector3D* pVertices, const size_t pVe
 }
 
 void CGLView::LogInfo(const QString& pMessage) {
-	Assimp::DefaultLogger::get()->info(pMessage.toStdString());
+	//Assimp::DefaultLogger::get()->info(pMessage.toStdString());
 }
 
 void CGLView::LogError(const QString& pMessage) {
-	Assimp::DefaultLogger::get()->error(pMessage.toStdString());
+	//Assimp::DefaultLogger::get()->error(pMessage.toStdString());
 }
 
 void CGLView::Draw_Node(const aiNode* pNode) {
